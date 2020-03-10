@@ -20,7 +20,7 @@ namespace Tasks
 
                     db.Open();
                     var command = db.CreateCommand();
-                    command.CommandText = @"CREATE TABLE [task]([id]INTEGER PRIMARY KEY AUTOINCREMENT, [name] VARCHAR, [importance] VARCHAR, [status] VARCHAR, [created_at] DATETIME, [updated_at] DATETIME);";
+                    command.CommandText = @"CREATE TABLE [task]([id]INTEGER PRIMARY KEY AUTOINCREMENT, [name] VARCHAR, [importance] VARCHAR, [status] INTEGER, [created_at] DATETIME, [updated_at] DATETIME);";
                     command.ExecuteNonQuery();
                 }
             }
